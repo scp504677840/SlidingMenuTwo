@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:scp="http://schemas.android.com/apk/res/com.scp.slidingmenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.scp.slidingmenu.view.SlidingMenu
+        android:id="@+id/main_left_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        scp:rightPadding="100dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <include layout="@layout/layout_left_menu" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/qqrightbg"
+                android:orientation="vertical" >
+                
+                <Button 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="切换菜单"
+                    android:onClick="toggleMenu"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </com.scp.slidingmenu.view.SlidingMenu>
+
+</RelativeLayout>
